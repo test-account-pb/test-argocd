@@ -1,0 +1,5 @@
+apiVersion: v2
+name: Hello App
+description: My first chart for Hello App
+version: 1.0.0
+appVersion: 1.0.0

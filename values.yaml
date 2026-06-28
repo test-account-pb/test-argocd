@@ -1,0 +1,5 @@
+replicaCount: 1
+dockerImage: ealen/echo-server
+dockerTag: latest
+containerPort: 8080
+appPort: 8080
