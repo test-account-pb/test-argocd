@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-app
-    {{- template "hello-app.labels" }}
+  name: "{{ .Release.Name }}-deployment"
+  {{- template "hello-app.labels" }}
 spec:
   replicas: "{{ .Values.replicaCount }}"
   selector:
@@ -12,9 +12,10 @@ spec:
     metadata:
       labels:
         app: hello-app
+      name: "{{ .Release.Name }"
     spec:
       containers:
-        - name: hello-app
+        - name: "{{ .Release.Name }}"
           image: "{{ .Values.dockerImage }}:{{ .Values.dockerTag }}"
           ports:
             - containerPort: "{{ .Values.containerPort }}"
