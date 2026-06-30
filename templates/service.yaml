@@ -7,5 +7,5 @@ spec:
     app: hello-app
   ports:
     - protocol: TCP
-      port: "{{ .Values.appPort }}"
-      targetPort: "{{ .Values.containerPort }}"
+      port: {{ .Values.appPort }}
+      targetPort: {{ .Values.containerPort }}
