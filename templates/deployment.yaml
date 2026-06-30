@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: hello-app
-      name: "{{ .Release.Name }"
+      name: "{{ .Release.Name }}"
     spec:
       containers:
         - name: "{{ .Release.Name }}"
